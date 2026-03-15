@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Sample: 5 real bike trips with point+zone spatial (lat/lon + station name/id) -->
+<log xmlns="http://www.xes-standard.org/" xes.version="1849-2016" xes.features="nested-attributes">
+  <extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+  <extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext"/>
+  <string key="concept:name" value="Citi Bike NYC - Spatial Sample"/>
+  <string key="spatial:style" value="point"/>
+  <string key="space:crs" value="EPSG:4326"/>
+  <classifier name="Activity" keys="concept:name"/>
+  <trace>
+    <string key="concept:name" value="7B17F6DF53DD6A7E"/>
+    <string key="bike_type" value="electric_bike"/>
+    <string key="member_casual" value="member"/>
+    <int key="duration_sec" value="557"/>
+    <string key="start_station_id" value="4816.02"/>
+    <string key="end_station_id" value="5115.05"/>
+    <event>
+      <string key="concept:name" value="Trip Started"/>
+      <date key="time:timestamp" value="2025-10-12T09:35:05.505000+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.69943"/>
+      <float key="space:lon" value="-73.91337"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="Myrtle Ave &amp; Linden St"/>
+      <string key="space:zone_id" value="4816.02"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Trip Ended"/>
+      <date key="time:timestamp" value="2025-10-12T09:44:23.193000"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.7098"/>
+      <float key="space:lon" value="-73.91727"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="Willoughby Ave &amp; Onderdonk Ave"/>
+      <string key="space:zone_id" value="5115.05"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="07D9732BC56866EC"/>
+    <string key="bike_type" value="classic_bike"/>
+    <string key="member_casual" value="casual"/>
+    <int key="duration_sec" value="716"/>
+    <string key="start_station_id" value="4784.02"/>
+    <string key="end_station_id" value="4500.07"/>
+    <event>
+      <string key="concept:name" value="Trip Started"/>
+      <date key="time:timestamp" value="2025-10-05T02:04:03.171000+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.698568"/>
+      <float key="space:lon" value="-73.918877"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="Greene Ave &amp; Myrtle Ave"/>
+      <string key="space:zone_id" value="4784.02"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Trip Ended"/>
+      <date key="time:timestamp" value="2025-10-05T02:16:00.014000"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.68973"/>
+      <float key="space:lon" value="-73.93353"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="Lexington Ave &amp; Stuyvesant Ave"/>
+      <string key="space:zone_id" value="4500.07"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="4EC7F0BDEE4DC2BB"/>
+    <string key="bike_type" value="electric_bike"/>
+    <string key="member_casual" value="casual"/>
+    <int key="duration_sec" value="354"/>
+    <string key="start_station_id" value="6551.16"/>
+    <string key="end_station_id" value="6575.03"/>
+    <event>
+      <string key="concept:name" value="Trip Started"/>
+      <date key="time:timestamp" value="2025-10-03T13:41:45.929000+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.755393"/>
+      <float key="space:lon" value="-73.977601"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="E 46 St &amp; Madison Ave"/>
+      <string key="space:zone_id" value="6551.16"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Trip Ended"/>
+      <date key="time:timestamp" value="2025-10-03T13:47:39.944000"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.755293"/>
+      <float key="space:lon" value="-73.967641"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="E 51 St &amp; 2 Ave"/>
+      <string key="space:zone_id" value="6575.03"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="6F1BC9CD39FEF693"/>
+    <string key="bike_type" value="electric_bike"/>
+    <string key="member_casual" value="casual"/>
+    <int key="duration_sec" value="779"/>
+    <string key="start_station_id" value="7020.02"/>
+    <string key="end_station_id" value="6809.09"/>
+    <event>
+      <string key="concept:name" value="Trip Started"/>
+      <date key="time:timestamp" value="2025-10-09T09:26:27.257000+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.77095553869235"/>
+      <float key="space:lon" value="-73.95356208096926"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="E 77 St &amp; 1 Ave"/>
+      <string key="space:zone_id" value="7020.02"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Trip Ended"/>
+      <date key="time:timestamp" value="2025-10-09T09:39:26.373000"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.763189"/>
+      <float key="space:lon" value="-73.978434"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="W 55 St &amp; 6 Ave"/>
+      <string key="space:zone_id" value="6809.09"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="CE8DA29166F23971"/>
+    <string key="bike_type" value="electric_bike"/>
+    <string key="member_casual" value="member"/>
+    <int key="duration_sec" value="411"/>
+    <string key="start_station_id" value="6398.08"/>
+    <string key="end_station_id" value="6575.03"/>
+    <event>
+      <string key="concept:name" value="Trip Started"/>
+      <date key="time:timestamp" value="2025-10-04T21:59:06.900000+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.74848023448579"/>
+      <float key="space:lon" value="-73.98255586624146"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="E 35 St &amp; Madison Ave"/>
+      <string key="space:zone_id" value="6398.08"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Trip Ended"/>
+      <date key="time:timestamp" value="2025-10-04T22:05:58.251000"/>
+      <string key="lifecycle:transition" value="complete"/>
+      <float key="space:lat" value="40.755293"/>
+      <float key="space:lon" value="-73.967641"/>
+      <string key="space:crs" value="EPSG:4326"/>
+      <string key="space:zone_name" value="E 51 St &amp; 2 Ave"/>
+      <string key="space:zone_id" value="6575.03"/>
+    </event>
+  </trace>
+</log>

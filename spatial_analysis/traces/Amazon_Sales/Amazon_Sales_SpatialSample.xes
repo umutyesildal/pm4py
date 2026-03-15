@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!-- Sample: 3 real orders with zone-based spatial attrs (city/state/postal/country) -->
+<log xmlns="http://www.xes-standard.org/" xes.version="1849-2016" xes.features="nested-attributes">
+  <extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext"/>
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext"/>
+  <extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext"/>
+  <string key="concept:name" value="Amazon Sales India - Spatial Sample"/>
+  <string key="spatial:style" value="zone"/>
+  <classifier name="Activity" keys="concept:name"/>
+  <trace>
+    <string key="concept:name" value="171-0006482-2020369"/>
+    <string key="space:city" value="HALDIA"/>
+    <string key="space:state" value="WEST BENGAL"/>
+    <string key="space:postal_code" value="721607"/>
+    <string key="space:country" value="IN"/>
+    <string key="final_status" value="Shipped - Delivered To Buyer"/>
+    <string key="fulfilment" value="MERCHANT"/>
+    <string key="ship_service_level" value="STANDARD"/>
+    <event>
+      <string key="concept:name" value="Order Placed"/>
+      <date key="time:timestamp" value="2022-04-24T05:35:48.823587+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Payment Confirmed"/>
+      <date key="time:timestamp" value="2022-04-24T16:50:12.301776+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Packed"/>
+      <date key="time:timestamp" value="2022-04-25T23:14:39.185601+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Shipped"/>
+      <date key="time:timestamp" value="2022-04-26T04:16:20.593060+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Out for Delivery"/>
+      <date key="time:timestamp" value="2022-04-29T06:55:31.499737+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Delivered"/>
+      <date key="time:timestamp" value="2022-04-29T15:40:53+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="171-0000902-4490745"/>
+    <string key="space:city" value="HOWRAH"/>
+    <string key="space:state" value="WEST BENGAL"/>
+    <string key="space:postal_code" value="711104"/>
+    <string key="space:country" value="IN"/>
+    <string key="final_status" value="Cancelled"/>
+    <string key="fulfilment" value="AMAZON"/>
+    <string key="ship_service_level" value="EXPEDITED"/>
+    <event>
+      <string key="concept:name" value="Order Placed"/>
+      <date key="time:timestamp" value="2022-06-08T19:50:28.909558+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Cancelled"/>
+      <date key="time:timestamp" value="2022-06-09T16:05:37+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+  </trace>
+  <trace>
+    <string key="concept:name" value="171-0000547-8192359"/>
+    <string key="space:city" value="PIMPRI CHINCHWAD"/>
+    <string key="space:state" value="MAHARASHTRA"/>
+    <string key="space:postal_code" value="412101"/>
+    <string key="space:country" value="IN"/>
+    <string key="final_status" value="Shipped"/>
+    <string key="fulfilment" value="AMAZON"/>
+    <string key="ship_service_level" value="EXPEDITED"/>
+    <event>
+      <string key="concept:name" value="Order Placed"/>
+      <date key="time:timestamp" value="2022-06-06T16:46:04.342140+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Payment Confirmed"/>
+      <date key="time:timestamp" value="2022-06-06T18:26:32.380652+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Packed"/>
+      <date key="time:timestamp" value="2022-06-07T00:19:11.036821+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+    <event>
+      <string key="concept:name" value="Shipped"/>
+      <date key="time:timestamp" value="2022-06-07T18:07:01+00:00"/>
+      <string key="lifecycle:transition" value="complete"/>
+    </event>
+  </trace>
+</log>

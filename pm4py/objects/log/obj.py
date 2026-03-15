@@ -72,6 +72,7 @@ class XESExtension(Enum):
         "swtelemetry",
         "http://www.xes-standard.org/swtelemetry.xesext",
     )
+    Space = ("Space", "space", "space.xesext")
     Time = ("Time", "time", "http://www.xes-standard.org/time.xesext")
 
     def __init__(self, name, prefix, uri):

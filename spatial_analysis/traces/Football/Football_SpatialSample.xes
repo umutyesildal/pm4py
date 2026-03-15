@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+  Football_SpatialSample.xes
+  ~~~~~~~~~~~~~~~~~~~~~~~~~~
+  Spatial-aware sample extracted from the DFL Football Event Data.
+  Original file: Football.xes (DFL-MAT-J03WR9, 1452 events, 1 trace)
+
+  This sample contains 15 REAL events from the opening minutes of the match,
+  re-mapped to the standardised space: namespace proposed in the SAEL thesis.
+
+  Spatial style : Point (local 2-D pitch coordinates)
+  CRS           : LOCAL:pitch  (origin = bottom-left corner of the pitch,
+                   X = length 0-105 m, Y = width 0-68 m)
+  Attributes    :
+      space:x           – ball X-coordinate at event time (metres)
+      space:y           – ball Y-coordinate at event time (metres)
+      space:x_source    – ball X-coordinate at origin of the action (e.g. pass start)
+      space:y_source    – ball Y-coordinate at origin of the action
+      space:crs         – coordinate reference system (LOCAL:pitch)
+
+  15 events · 1 trace · 7 distinct activity types
+-->
+<log xes.version="1849-2016" xes.features="nested-attributes"
+     xmlns="http://www.xes-standard.org/">
+
+  <extension name="Time"    prefix="time"    uri="http://www.xes-standard.org/time.xesext" />
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+  <extension name="Lifecycle" prefix="lifecycle" uri="http://www.xes-standard.org/lifecycle.xesext" />
+
+  <!-- Spatial extension (proposed, not yet a formal .xesext) -->
+  <global scope="event">
+    <string key="concept:name" value="" />
+    <date   key="time:timestamp" value="1970-01-01T00:00:00.000+00:00" />
+    <float  key="space:x" value="0.0" />
+    <float  key="space:y" value="0.0" />
+    <string key="space:crs" value="LOCAL:pitch" />
+  </global>
+
+  <classifier name="Activity" keys="concept:name" />
+
+  <!-- ============================================================ -->
+  <!-- Trace: DFL-MAT-J03WR9  (Bundesliga match, 2022-11-11)        -->
+  <!-- ============================================================ -->
+  <trace>
+    <string key="concept:name" value="DFL-MAT-J03WR9" />
+
+    <!-- 1 · KickOff ─ centre circle -->
+    <event>
+      <string key="concept:name"    value="KickOff" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:11.980+00:00" />
+      <float  key="space:x"         value="52.50" />
+      <float  key="space:y"         value="34.00" />
+      <float  key="space:x_source"  value="52.50" />
+      <float  key="space:y_source"  value="34.00" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 2 · Play ─ left-wing area -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:15.065+00:00" />
+      <float  key="space:x"         value="29.46" />
+      <float  key="space:y"         value="36.91" />
+      <float  key="space:x_source"  value="29.46" />
+      <float  key="space:y_source"  value="36.91" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 3 · TacklingGame ─ right side, near goal line -->
+    <event>
+      <string key="concept:name"    value="TacklingGame" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:16.921+00:00" />
+      <float  key="space:x"         value="73.13" />
+      <float  key="space:y"         value="9.49" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 4 · Play ─ right side, build-up -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:18.410+00:00" />
+      <float  key="space:x"         value="72.54" />
+      <float  key="space:y"         value="12.84" />
+      <float  key="space:x_source"  value="72.54" />
+      <float  key="space:y_source"  value="12.84" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 5 · Play ─ right wing, attacking third -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:19.642+00:00" />
+      <float  key="space:x"         value="82.06" />
+      <float  key="space:y"         value="17.05" />
+      <float  key="space:x_source"  value="82.06" />
+      <float  key="space:y_source"  value="17.05" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 6 · Play ─ deep right, near corner flag -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:22.387+00:00" />
+      <float  key="space:x"         value="94.28" />
+      <float  key="space:y"         value="33.60" />
+      <float  key="space:x_source"  value="94.28" />
+      <float  key="space:y_source"  value="33.60" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 7 · Play ─ long pass received back in midfield (source differs!) -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:29.427+00:00" />
+      <float  key="space:x"         value="48.39" />
+      <float  key="space:y"         value="63.49" />
+      <float  key="space:x_source"  value="81.86" />
+      <float  key="space:y_source"  value="56.06" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 8 · Play ─ left side, counter-attack -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:31.145+00:00" />
+      <float  key="space:x"         value="29.46" />
+      <float  key="space:y"         value="55.96" />
+      <float  key="space:x_source"  value="29.46" />
+      <float  key="space:y_source"  value="55.96" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 9 · Play ─ deep left, approaching penalty area -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:33.674+00:00" />
+      <float  key="space:x"         value="13.93" />
+      <float  key="space:y"         value="65.89" />
+      <float  key="space:x_source"  value="13.93" />
+      <float  key="space:y_source"  value="65.89" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 10 · GoalKick ─ from goal area (source = goal line) -->
+    <event>
+      <string key="concept:name"    value="GoalKick" />
+      <date   key="time:timestamp"  value="2022-11-11T18:31:53.956+00:00" />
+      <float  key="space:x"         value="5.11" />
+      <float  key="space:y"         value="34.40" />
+      <float  key="space:x_source"  value="0.00" />
+      <float  key="space:y_source"  value="13.14" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 11 · Play ─ midfield, resumed after goal kick -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:32:03.330+00:00" />
+      <float  key="space:x"         value="40.58" />
+      <float  key="space:y"         value="53.46" />
+      <float  key="space:x_source"  value="40.58" />
+      <float  key="space:y_source"  value="53.46" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 12 · OtherBallAction ─ aerial duel in right-centre -->
+    <event>
+      <string key="concept:name"    value="OtherBallAction" />
+      <date   key="time:timestamp"  value="2022-11-11T18:32:07.200+00:00" />
+      <float  key="space:x"         value="64.32" />
+      <float  key="space:y"         value="63.29" />
+      <float  key="space:x_source"  value="64.32" />
+      <float  key="space:y_source"  value="63.29" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 13 · Play ─ long pass from right flank (source ≠ position) -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:32:10.206+00:00" />
+      <float  key="space:x"         value="78.95" />
+      <float  key="space:y"         value="55.36" />
+      <float  key="space:x_source"  value="63.62" />
+      <float  key="space:y_source"  value="61.68" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 14 · Play ─ attacking third, central -->
+    <event>
+      <string key="concept:name"    value="Play" />
+      <date   key="time:timestamp"  value="2022-11-11T18:32:13.676+00:00" />
+      <float  key="space:x"         value="102.70" />
+      <float  key="space:y"         value="52.45" />
+      <float  key="space:x_source"  value="102.70" />
+      <float  key="space:y_source"  value="52.45" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+    <!-- 15 · ShotAtGoal ─ edge of box, right side -->
+    <event>
+      <string key="concept:name"    value="ShotAtGoal" />
+      <date   key="time:timestamp"  value="2022-11-11T18:32:22.258+00:00" />
+      <float  key="space:x"         value="91.98" />
+      <float  key="space:y"         value="33.50" />
+      <float  key="space:x_source"  value="91.98" />
+      <float  key="space:y_source"  value="33.50" />
+      <string key="space:crs"       value="LOCAL:pitch" />
+    </event>
+
+  </trace>
+</log>

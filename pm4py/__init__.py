@@ -27,6 +27,7 @@ from pm4py import (
     statistics,
     algo,
     visualization,
+    spatial,
     llm,
     connectors,
 )

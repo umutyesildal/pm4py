@@ -137,3 +137,7 @@ dmypy.json
 
 # Renovate bot
 renovate.json5
+
+# Ignore Truck_Shipment XES files
+spatial_analysis/traces/Truck_Shipment/*.xes
+spatial_analysis/Truck_Shipment/*.xes

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Synthetic spatial log for testing pm4py_spatial. Two traces, mixed CRS. -->
+<log xmlns="http://www.xes-standard.org/" xes.version="1849-2016" xes.features="nested-attributes">
+  <extension name="Concept" prefix="concept" uri="http://www.xes-standard.org/concept.xesext" />
+  <extension name="Time" prefix="time" uri="http://www.xes-standard.org/time.xesext" />
+  <extension name="Space" prefix="space" uri="space.xesext" />
+  <string key="concept:name" value="Synthetic Spatial Test Log" />
+  <string key="space:crs" value="EPSG:4326" />
+  <classifier name="Activity" keys="concept:name" />
+
+  <!-- Trace 1: GPS coordinates (WGS84, x=lon y=lat), two events -->
+  <trace>
+    <string key="concept:name" value="case-001" />
+    <event>
+      <string key="concept:name" value="Pick Up" />
+      <date key="time:timestamp" value="2025-06-01T08:00:00.000+00:00" />
+      <float key="space:x" value="-73.98566" />
+      <float key="space:y" value="40.74838" />
+      <string key="space:location" value="ST-001" />
+      <string key="space:level" value="Ground" />
+    </event>
+    <event>
+      <string key="concept:name" value="Drop Off" />
+      <date key="time:timestamp" value="2025-06-01T08:15:00.000+00:00" />
+      <float key="space:x" value="-73.96922" />
+      <float key="space:y" value="40.75895" />
+      <string key="space:location" value="ST-042" />
+      <string key="space:level" value="Ground" />
+    </event>
+  </trace>
+
+  <!-- Trace 2: One event overrides CRS at event level -->
+  <trace>
+    <string key="concept:name" value="case-002" />
+    <event>
+      <string key="concept:name" value="Enter Zone" />
+      <date key="time:timestamp" value="2025-06-02T10:00:00.000+00:00" />
+      <float key="space:x" value="-73.93524" />
+      <float key="space:y" value="40.73061" />
+      <string key="space:location" value="Z-A" />
+    </event>
+    <event>
+      <string key="concept:name" value="Process" />
+      <date key="time:timestamp" value="2025-06-02T10:30:00.000+00:00" />
+      <float key="space:x" value="583960.0" />
+      <float key="space:y" value="4507523.0" />
+      <string key="space:crs" value="EPSG:32618" />
+      <string key="space:location" value="Z-B" />
+    </event>
+    <event>
+      <string key="concept:name" value="Exit Zone" />
+      <date key="time:timestamp" value="2025-06-02T11:00:00.000+00:00" />
+      <float key="space:x" value="-73.93524" />
+      <float key="space:y" value="40.73061" />
+      <string key="space:location" value="Z-A" />
+    </event>
+  </trace>
+</log>
